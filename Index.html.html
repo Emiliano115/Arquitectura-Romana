@@ -1,0 +1,394 @@
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Arquitectura Romana</title>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&amp;display=swap" rel="stylesheet"/>
+  <style>
+    body {
+      font-family: 'Roboto', sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f4f4f4;
+      transition: background-color 0.3s, color 0.3s; /* Transición suave para el modo oscuro */
+    }
+
+    /* Estilo para el modo oscuro */
+    body.dark-mode {
+      background-color: #333;
+      color: #fff;
+    }
+
+    header {
+      background-color: #333;
+      color: #fff;
+      padding: 10px 0;
+      text-align: center;
+      transition: background-color 0.3s; /* Transición suave para el encabezado */
+    }
+
+    header.dark-mode {
+      background-color: #222;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 2.5em;
+    }
+
+    nav {
+      background-color: #444;
+      overflow: hidden;
+      transition: background-color 0.3s;
+    }
+
+    nav.dark-mode {
+      background-color: #222;
+    }
+
+    nav a {
+      float: left;
+      display: block;
+      color: #fff;
+      text-align: center;
+      padding: 14px 16px;
+      text-decoration: none;
+      transition: background-color 0.3s, color 0.3s; /* Transición suave para enlaces */
+    }
+
+    nav a:hover {
+      background-color: #ddd;
+      color: black;
+    }
+
+    nav a.dark-mode:hover {
+      background-color: #444;
+      color: #fff;
+    }
+
+    .container {
+      padding: 20px;
+    }
+
+    .section-title {
+      font-size: 2.5em;
+      margin-bottom: 20px;
+      color: #333;
+      transition: color 0.3s;
+    }
+
+    .section-title.dark-mode {
+      color: #fff;
+    }
+
+    .row {
+      display: flex;
+      margin-bottom: 30px;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      transition: all 0.3s; /* Transición suave para las filas */
+    }
+
+    .left, .right {
+      width: 48%;
+      box-sizing: border-box;
+      transition: all 0.3s;
+    }
+
+    .left img, .right img {
+      width: 100%;
+      height: auto;
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+      transition: transform 0.3s ease-in-out; /* Animación de las imágenes */
+    }
+
+    .left img:hover, .right img:hover {
+      transform: scale(1.05); /* Efecto de zoom al pasar el ratón */
+    }
+
+    .content h2 {
+      font-size: 1.8em;
+      color: #555;
+    }
+
+    .content p {
+      font-size: 1.2em;
+      line-height: 1.8;
+      color: #666;
+      margin-bottom: 15px;
+      transition: color 0.3s;
+    }
+
+    .content.dark-mode p {
+      color: #ccc;
+    }
+
+    .bibliography-content {
+  text-align: center;
+  width: 100%;
+}
+
+    footer {
+      background-color: #333;
+      color: #fff;
+      text-align: center;
+      padding: 10px 0;
+      position: fixed;
+      width: 100%;
+      bottom: 0;
+      transition: background-color 0.3s;
+    }
+
+    footer.dark-mode {
+      background-color: #222;
+    }
+
+    .hidden {
+  display: none;
+}
+
+#bibliografia {
+  background-color: #f8f8f8;
+  padding: 10px;
+  border-top: 2px solid #ccc;
+  transition: max-height 0.3s ease-in-out;
+}
+
+    /* Estilo para la galería interactiva */
+    .gallery {
+      display: flex;
+      gap: 15px;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    .gallery img {
+      width: 100%;
+      max-width: 300px;
+      cursor: pointer;
+      border-radius: 8px;
+      transition: transform 0.3s ease-in-out;
+    }
+
+    .gallery img:hover {
+      transform: scale(1.1); /* Efecto de zoom para la galería */
+    }
+
+    /* Estilo de imagen activa en galería */
+    .active-image {
+      width: 100%;
+      max-width: 600px;
+      margin: 20px auto;
+      display: block;
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    }
+
+    /* Estilos para dispositivos móviles */
+    @media (max-width: 768px) {
+      .row {
+        flex-direction: column;
+      }
+
+      .left, .right {
+        width: 100%;
+      }
+
+      .gallery {
+        flex-direction: column;
+        align-items: center;
+      }
+    }
+
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Arquitectura Romana</h1>
+  </header>
+  <nav>
+    <a href="#caracteristicas">Características</a>
+    <a href="#estructuras">Estructuras Notables</a>
+    <a href="#tecnicas">Técnicas de Construcción</a>
+    <a href="#legado">Legado</a>
+    <a href="#historia">Historia</a>
+  </nav>
+  
+  <div class="container">
+     <!-- Características Principales -->
+    <div class="content" id="caracteristicas">
+      <h2 class="section-title">Características Principales</h2>
+      <div class="row">
+        <div class="left">
+          <p>La arquitectura romana es un testimonio del avance técnico y artístico del Imperio Romano. Con influencias etruscas y griegas, se fusionaron estilos para crear edificaciones funcionales y símbolos de poder. La romana no solo buscaba la belleza, sino también la durabilidad y la adaptabilidad al entorno.</p>
+          <p><strong>Innovación en los Materiales:</strong> El uso del concreto (<em>opus caementicium</em>) permitió la creación de estructuras masivas y complejas, como el Panteón, cuya cúpula es un ícono de la ingeniería, capaz de resistir las tensiones del tiempo gracias a su innovador diseño estructural. Este material permitió a los romanos construir grandes edificaciones como el Coliseo y las grandes termas romanas.</p>
+          <p><strong>La Utilización del Arco:</strong> Esta técnica no solo permitía una mayor estabilidad estructural, sino que también habilitaba la creación de espacios de gran amplitud. El uso del arco en la construcción de acueductos, puentes y el Coliseo, revolucionó la arquitectura, permitiendo la creación de estructuras más ligeras y duraderas.</p>
+          <p><strong>Diseño Espacial y Simetría:</strong> Los romanos prestaban gran atención a la organización espacial. La planificación urbana, que integraba foros, templos, viviendas y mercados, mantenía un equilibrio perfecto entre estética y funcionalidad, lo que reflejaba su poder imperial. Muchas ciudades romanas fueron construidas siguiendo un patrón de calles rectas que formaban una cuadrícula, lo que facilitaba la circulación y el comercio.</p>
+          <p><strong>Adaptación Social:</strong> Los romanos crearon espacios públicos como baños y plazas que eran esenciales para la vida social y política. Las termas romanas no solo servían para la higiene, sino también como lugares de encuentro, donde se discutían asuntos públicos y se establecían relaciones sociales.</p>
+        </div>
+        <div class="right">
+          <!-- Imagen del Panteón -->
+          <img src="https://external-preview.redd.it/P0b6ncY4IU0SyGb9ybELHOVTGqOBFWU5npz-oo_9np4.jpg?auto=webp&s=4fadc4e6224f9aa94d8af84fa35dee9829ac0ebd"/>
+        </div>
+      </div>
+      <div class="row">
+        <div class="left">
+          <p><strong>Influencias Culturales:</strong> La arquitectura romana no solo absorbió las influencias griegas y etruscas, sino que también incorporó técnicas provenientes de otras culturas como la egipcia y la persa, fusionando estilos y creando nuevas formas de diseño. La utilización de la luz natural, la proporción matemática y la relación entre la edificación y su entorno son elementos que continúan presentes en la arquitectura moderna.</p>
+          <p><strong>Estética y Funcionalidad:</strong> Cada edificación romana estaba diseñada para ser a la vez estéticamente impresionante y extremadamente funcional. Los arquitectos romanos no solo se enfocaban en el aspecto visual, sino también en la practicidad de cada estructura. La creación de espacios multifuncionales, como el Foro Romano, que servía para actos políticos, religiosos y comerciales, es un claro ejemplo de esta dualidad entre belleza y utilidad.</p>
+        </div>
+        <div class="right">
+          <!-- Imagen del Foro Romano -->
+          <img src="https://th.bing.com/th/id/OIP.6e55p8H6cv0HCmtktEvkywHaEo?rs=1&pid=ImgDetMain"/>
+        </div>
+      </div>
+    </div>
+    
+    <!-- Estructuras Notables -->
+    <div class="content" id="estructuras">
+      <hr>
+      <h2 class="section-title">Estructuras Notables</h2>
+      <div class="row">
+        <div class="left">
+          <p><strong>El Coliseo:</strong> Este anfiteatro es uno de los mayores logros de la ingeniería romana. Con una capacidad para más de 50,000 espectadores, su construcción fue un desafío monumental. A través de su diseño innovador, el Coliseo no solo era un lugar para las luchas de gladiadores, sino también un símbolo de la magnificencia y el control del Imperio Romano.</p>
+          <p><strong>El Panteón:</strong> Una de las estructuras más importantes de la arquitectura romana, el Panteón destaca por su enorme cúpula, que sigue siendo la más grande del mundo en concreto no armado. Esta estructura se construyó para honrar a los dioses romanos, y su impresionante diseño ha influido en muchas generaciones de arquitectos hasta el día de hoy.</p>
+        </div>
+        <div class="right">
+          <!-- Imagen del Coliseo -->
+          <img src="https://th.bing.com/th/id/R.bb66eb0a1ec0dfcda07563d1c3b1c09f?rik=Kk0xBUA%2fmgEmhg&pid=ImgRaw&r=0" alt="El Coliseo de Roma"/>
+        </div>
+      </div>
+      <div class="row">
+        <div class="left">
+          <p><strong>Acueductos:</strong> El uso de acueductos permitió a las ciudades romanas abastecerse de agua de manera eficiente. Estas impresionantes estructuras transportaban agua a largas distancias y siguen siendo un testimonio de la destreza ingenieril romana. Uno de los más conocidos es el acueducto de Segovia, que aún se conserva en excelentes condiciones.</p>
+          <p><strong>Las Termas Romanas:</strong> Las termas eran complejos de baños públicos que servían no solo para la higiene, sino también para la socialización y el ocio. Estos edificios contaban con sistemas de calefacción subterránea (<em>hipocausto</em>) que mantenían el agua caliente y los espacios acogedores.</p>
+        </div>
+        <div class="right">
+          <!-- Imagen del Acueducto -->
+          <img src="https://th.bing.com/th/id/R.dbd29ef64ff7c7bf26e5aabf099bc0cf?rik=uWEIhTZZGUFRNQ&pid=ImgRaw&r=0" alt="Acueducto de Segovia"/>
+        </div>
+      </div>
+    </div>
+    
+    <!-- Técnicas de Construcción -->
+    <div class="content" id="tecnicas">
+      <h2 class="section-title">Técnicas de Construcción</h2>
+      <div class="row">
+        <div class="left">
+          <p><strong>Opus Caementicium:</strong> El concreto romano fue fundamental en la creación de algunas de las estructuras más duraderas de la historia. Su resistencia permitió la creación de muros macizos y cúpulas enormes, lo que facilitó la construcción de edificios monumentales como el Panteón y las basílicas romanas. Esta técnica fue un avance que permitió a Roma dominar la arquitectura y la ingeniería de su tiempo.</p>
+          <p><strong>El Uso del Arco:</strong> La técnica del arco permitió a los romanos diseñar puentes, acueductos y edificios con una estabilidad mucho mayor que la de las construcciones anteriores. El uso del arco permitió crear espacios más grandes y resistentes, que con el tiempo definieron la arquitectura romana.</p>
+        </div>
+        <div class="right">
+          <!-- Imagen del Arco Romano -->
+          <img src="https://th.bing.com/th/id/OIP.590H0xl_wj4RGGKoF6Zt0wHaE8?rs=1&pid=ImgDetMain" alt="Arco Romano"/>
+        </div>
+      </div>
+    </div>
+    
+    <!-- Legado -->
+    <div class="content" id="legado">
+      <h2 class="section-title">Legado de la Arquitectura Romana</h2>
+      <div class="row">
+        <div class="left">
+          <p>El legado de la arquitectura romana sigue vigente en muchos aspectos de la vida moderna. Las innovaciones en materiales, estructuras y técnicas de diseño continúan influyendo en la construcción de edificios y ciudades hoy en día. Los principios de la arquitectura romana, como la utilización de espacios públicos y la integración de la edificación con el entorno, siguen siendo una inspiración.</p>
+          <p>La preservación de estructuras como el Coliseo, el Panteón y los acueductos es crucial para entender el alcance de este legado. Además, la arquitectura romana ha influido en estilos posteriores, desde el Renacimiento hasta la arquitectura contemporánea, reafirmando su lugar como una de las civilizaciones más influyentes de la historia.</p>
+        </div>
+        <div class="right">
+          <!-- Imagen de Ruinas Romanas -->
+          <img src="https://media.istockphoto.com/id/1046120262/ja/%E3%82%B9%E3%83%88%E3%83%83%E3%82%AF%E3%83%95%E3%82%A9%E3%83%88/%E3%82%AB%E3%83%AB%E3%82%BF%E3%83%98%E3%83%8A-%E3%83%AD%E3%83%BC%E3%83%9E%E5%8A%87%E5%A0%B4%E3%83%A0%E3%83%AB%E3%82%B7%E3%82%A2%E3%82%B9%E3%83%9A%E3%82%A4%E3%83%B3.jpg?s=170667a&w=0&k=20&c=-QswkU9WwNFEUuCKxhO_zB0_aWmysm5c1If4qwMhOuM=" alt="Ruinas Romanas"/>
+        </div>
+      </div>
+    </div>
+   
+    <!-- Historia -->
+    <div class="content" id="historia">
+      <h2 class="section-title">Historia de la Arquitectura Romana</h2>
+      <div class="row">
+        <div class="left">
+          <p>La arquitectura romana abarca un período de casi mil años, desde la fundación de Roma en el 753 a.C. hasta la caída del imperio en el siglo V d.C. Durante este tiempo, la arquitectura romana evolucionó desde estructuras simples y funcionales hasta monumentos impresionantes que simbolizaban el poder y la grandiosidad de Roma. El imperio romano expandió sus fronteras a través de Europa, Asia y África, y cada región adaptó las ideas arquitectónicas romanas a sus propias necesidades y recursos.</p>
+          <p>Las influencias etruscas, que introdujeron los primeros elementos arquitectónicos romanos, y las griegas, que enseñaron a los romanos el uso de la columna y el templo, fueron fundamentales en el desarrollo del estilo romano. Sin embargo, fue la innovación romana en el uso de materiales como el concreto y el arco lo que permitió a los romanos crear estructuras sin precedentes en escala y sofisticación.</p>
+        </div>
+        <div class="right">
+          <!-- Imagen de Roma Antigua -->
+          <img src="https://historia.nationalgeographic.com.es/medio/2019/01/18/foro-romano-roma_6a11fe2b.jpg" alt="Roma Antigua"/>
+        </div>
+      </div>
+    </div>
+  </div>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+    </div>
+  </div>
+</div>
+  <footer>
+       <button id="toggleBibliografia">Mostrar Bibliografía</button>
+
+    <div id="bibliografia" class="hidden">
+      <div class="row">
+        <div class="left">
+        <h2>Bibliografía</h2>
+        <ul>
+             <li><a href="https://www.smithsonianmag.com">Smithsonian Institution. (s.f.). The enduring influence of Roman architecture. Smithsonian Magazine. Recuperado el [fecha de consulta].</a></li>
+    <li><a href="https://www.history.com">History. (s.f.). Roman engineering and architecture. History Channel. Recuperado el [fecha de consulta].</a></li>
+        <li><a href="https://www.cambridge.org">Wilson, A. (2018). The Roman architectural legacy: Influence on modern design. Cambridge University Press. Recuperado el [fecha de consulta].</a></li>   
+    <li><a href="https://historia.nationalgeographic.com.es/temas/antigua-roma">Reportajes y fotografías de Antigua Roma en National Geographic Historia. (n.d.). Historia National Geographic.</a></li>
+    <li><a href="https://education.nationalgeographic.org/resource/roman-aqueducts/">National Geographic. (2024, octubre 18). Roman aqueducts. National Geographic Education.</a></li>
+    <li><a href="https://historia.nationalgeographic.com.es/temas/imperio-romano">National Geographic. (s.f.). Imperio romano. Recuperado de.</a></li>
+            
+        </ul>
+      </div>
+    </div>
+  </div>
+    </div>
+
+    <script src="script.js"></script>
+
+  </div>  
+  <p>Presiona la tecla "d" para cambiar al modo oscuro</p>
+  </footer>
+
+  <script>
+    // Función para mostrar la imagen seleccionada en la galería
+    function showImage(img) {
+      const activeImage = document.getElementById('activeImage');
+      activeImage.src = img.src;
+      activeImage.style.display = 'block';
+    }
+
+    // Función para cambiar al modo oscuro
+    document.addEventListener('keydown', function(event) {
+      if (event.key === 'd') {
+        document.body.classList.toggle('dark-mode');
+        document.querySelector('header').classList.toggle('dark-mode');
+        document.querySelector('nav').classList.toggle('dark-mode');
+        document.querySelectorAll('.section-title').forEach(function(element) {
+          element.classList.toggle('dark-mode');
+        });
+        document.querySelectorAll('.content').forEach(function(element) {
+          element.classList.toggle('dark-mode');
+        });
+        document.querySelector('footer').classList.toggle('dark-mode');
+        document.querySelectorAll('nav a').forEach(function(link) {
+          link.classList.toggle('dark-mode');
+        });
+      }
+    });
+  </script>
+   <script>
+  document.getElementById("toggleBibliografia").addEventListener("click", function() {
+    var bibliografia = document.getElementById("bibliografia");
+    
+    if (bibliografia.style.display === "none" || bibliografia.style.display === "") {
+      bibliografia.style.display = "block";
+      this.textContent = "Ocultar Bibliografía";
+    } else {
+      bibliografia.style.display = "none";
+      this.textContent = "Bibliografía";
+    }
+  });
+</script>
+</body>
+</html>
